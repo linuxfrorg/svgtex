@@ -122,15 +122,6 @@ while (arg_num < args.length) {
   break;
 }
 
-/*
-  console.log(
-    'port = ' + port + ", " +
-    'requests_to_serve = ' + requests_to_serve + ", " +
-    'bench_page = ' + bench_page + ", " +
-    'debug = ' + debug + "\n"
-  );
-*/
-
 // activeRequests holds information about any active MathJax requests.  It is
 // a hash, with a sequential number as the key.  request_num gets incremented
 // for *every* HTTP request, but only requests that get passed to MathJax have an
@@ -346,16 +337,3 @@ function listenLoop() {
 
 console.log("Loading bench page " + bench_page);
 page.open(bench_page, listenLoop);
-
-/* These includeJs calls would allow us to specify the MathJax location as a
-   command-line parameter, but then you'd have to take the <script> tags out of
-   index.html, and we'd lose the ability to debug by loading that in a browser
-   directly.
-page.open('index.html', function (status) {
-  page.includeJs('mathjax/MathJax.js?config=TeX-AMS-MML_SVG', function() {
-    page.includeJs('engine.js', listenLoop);
-  });
-});
-*/
-
-
