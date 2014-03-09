@@ -301,7 +301,7 @@ function parse_request(req) {
 
 function listenLoop() {
   // Set up the listener that will respond to every new request
-  service = server.listen('0.0.0.0:' + port, function(req, resp) {
+  service = server.listen('127.0.0.1:' + port, function(req, resp) {
     var query = parse_request(req);
     var request_num = query.num;
     console.log(request_num + ': ' + "received: " + req.method + " " +
