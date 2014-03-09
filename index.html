@@ -1,6 +1,4 @@
-<!--
-This file is loaded from main.js (phantomjs).
--->
+<!DOCTYPE html>
 <html>
   <head>
     <script type="text/x-mathjax-config">
@@ -8,9 +6,10 @@ This file is loaded from main.js (phantomjs).
         showProcessingMessages: false,
         messageStyle: "none",
         tex2jax: {
-          inlineMath: [["$", "$"], ["\\(", "\\)"]]
+          inlineMath:  [["$", "$"]]
         },
         SVG: {
+          font: "STIX-Web",
           linebreaks: {
             automatic: true,
             width: "container"
@@ -19,35 +18,14 @@ This file is loaded from main.js (phantomjs).
       });
     </script>
 
-    <!--
-      To run with a local version of mathjax:
-    <script type="text/javascript"
-      src="mathjax/MathJax.js?config=TeX-AMS-MML_SVG">
-    </script>
-    -->
-    <!--
-      The latest version of MathJax that's deployed to the CDN has a bug that prevents
-      MathML from working in PhantomJS:  https://github.com/mathjax/MathJax/issues/672
-      But, the latest .zip download has the fix.  So, for now, it needs to be
-      deployed locally.
-    -->
-      <script type="text/javascript"
-        src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_SVG">
-      </script>
+    <script type="text/javascript" src="mathjax/MathJax.js?config=TeX-AMS-MML_SVG-full"></script>
     <script type="text/javascript" src="engine.js"></script>
   </head>
   <body>
-    <h1>svgtex bench file</h1>
-    <p>TeX equation:</p>
+    <h1>svgtex</h1>
     <div id="math-tex">${\frac{x}{2}}$</div>
-    <p>MathML equation:</p>
     <div id="math-mml">
-      <math>
-        <mfrac>
-          <mi>y</mi>
-          <mn>2</mn>
-        </mfrac>
-      </math>
+      <math><mfrac><mi>y</mi><mn>2</mn></mfrac></math>
     </div>
   </body>
 </html>
