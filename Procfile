@@ -1,1 +1,0 @@
-web: phantomjs main.js
