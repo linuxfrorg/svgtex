@@ -1,3 +1,25 @@
+SVGTeX
+======
+
+SVGTeX is a forked project to render SVG from TeX equations, on the server,
+thanks to the MathJax lib and PhantomJS. It's used on LinuxFr.org.
+
+Install
+-------
+
+Install PhantomJS 1.9, then run these commands:
+
+```
+git clone https://github.com/linuxfrorg/svgtex
+cd svgtext
+git submodule update --init
+phantomjs main.js
+```
+
+Below, you will find the original README from svgtex.
+
+----
+
 svgtex
 ======
 
