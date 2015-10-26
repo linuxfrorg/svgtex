@@ -39,7 +39,7 @@ $ phantomjs main.js
 
 Loading bench page index.html
 Server started on port 16000
-Point your brownser at http://localhost:16000 for a test form.
+Point your browser at http://localhost:16000 for a test form.
 ```
 
 Try it out by pointing your browser at http://localhost:16000/, and using the test form
